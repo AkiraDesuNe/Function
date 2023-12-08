@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*
+Par ou Impar
+*/
+
+void ParouImpar (int Numero) {
+    (Numero%2==0) ? printf ("Par") : printf ("Impar");
+}
+
+int main()
+{
+    int Numero;
+    
+    printf("Digite um número: ");
+    scanf ("%d", &Numero);
+  
+ParouImpar(Numero);
+    
+return 0;
+
+}
