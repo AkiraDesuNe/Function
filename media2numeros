@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*
+media
+2 numeros
+*/
+float Media (float primeiro_Numero, float segundo_Numero) {
+      float resultado;
+      
+      resultado = (primeiro_Numero + segundo_Numero) / 2 ;
+      
+    printf ("Media: %.2f \n",resultado);
+      
+  return resultado;
+  
+}
+
+int main()
+{
+    float primeiro_Numero;
+    float segundo_Numero;
+    
+    printf("Digite o 1º número: ");
+    scanf ("%f", &primeiro_Numero);
+    
+    printf("Digite o 2º  número: ");
+    scanf ("%f", &segundo_Numero);
+    
+    
+Media (primeiro_Numero, segundo_Numero);
+    return 0;
+}
