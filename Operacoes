@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*
+Operacoes Matematicas
+*/
+
+float Soma (float Numero,float NumeroDois) {
+    float resultado;
+          resultado = Numero + NumeroDois;
+          printf ("Soma: %.2f + %.2f = %.2f \n",Numero,NumeroDois,resultado);
+     
+return resultado;
+}
+
+float Subtracao (float Numero,float NumeroDois) {
+    float resultado;
+          resultado = Numero - NumeroDois;
+          printf ("Subtracao: %.2f - %.2f = %.2f \n",Numero,NumeroDois,resultado);
+return resultado;
+     
+}
+
+float Multiplicacao (float Numero,float NumeroDois) {
+    float resultado;
+          resultado = Numero * NumeroDois;
+          printf ("Multiplicacao: %.2f x %.2f = %.2f  \n",Numero,NumeroDois,resultado);
+return resultado;
+     
+}
+
+float Divisao (float Numero,float NumeroDois) {
+    float resultado;
+         resultado = Numero / NumeroDois;
+         printf ("Divisao: %.2f / %.2f = %.2f  \n",Numero,NumeroDois,resultado); 
+return resultado;
+     
+}
+
+int main()
+{
+    float Numero;
+    float NumeroDois;
+    
+    printf("Digite um número: ");
+    scanf ("%f", &Numero);
+    
+    printf("Digite um número: ");
+    scanf ("%f", &NumeroDois);
+    
+    
+    Soma (Numero, NumeroDois);
+    Subtracao (Numero, NumeroDois);
+    Multiplicacao (Numero, NumeroDois);
+    Divisao (Numero, NumeroDois);
+    
+return 0;
+}
