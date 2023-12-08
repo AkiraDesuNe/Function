@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <locale.h>
+
+/*
+qtd de Par ou Impar
+*/
+
+void QtdParesImpares (int Numero, int pares, int impares) {
+    printf (" %d numeros pares \n ", pares);
+    printf ("%d numeros impares", impares);
+}
+
+int main()
+{
+    int Numero, i;
+    int pares,impares;
+    
+    setlocale (LC_ALL, "Portuguese");
+    
+    for (i=0;i<6;i++) {
+    printf("Digite o %dº número: ", i+1);
+    scanf ("%d", &Numero);
+    (Numero%2==0)? pares++ : impares++;
+    }
+  
+QtdParesImpares (Numero, pares, impares);
+    
+return 0;
+
+}
