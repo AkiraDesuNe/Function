@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <locale.h>
+
+/*
+qtd de Par ou Impar
+*/
+
+float metros_Centimetro (float metros) {
+      float resultado;
+      resultado = metros * 100;
+    printf ("%.2f metros equivale a %.2f centímetros",metros, resultado);
+return resultado;
+}
+
+int main()
+{
+    float metros;
+    
+    setlocale (LC_ALL, "Portuguese");
+    
+    
+    printf("Digite o valor em metros: ");
+    scanf ("%f", &metros);
+  
+metros_Centimetro (metros);
+    
+return 0;
+
+}
