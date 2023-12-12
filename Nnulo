@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* resposta(int numero) {
+    static char texto[240];
+    if (numero != 0)
+        strcpy(texto, "Não-nulo");
+    else
+        strcpy(texto, "Nulo");
+        
+return texto;
+}
+
+int main() {
+    int numero;
+
+    printf("Digite numero: ");
+    scanf("%d", &numero);
+
+   printf ("Resposta: %s\n", resposta(numero));
+
+  
+    return 0;
+}
