@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+//questao02
+
+
+int delta (int numero_A,int numero_B,int numero_C) {
+    int d;
+    
+    d= (numero_B * numero_B) + (- 4 * numero_A * numero_C);
+    
+    printf ("Delta = %d", d);
+        
+return d;
+}
+
+int main() {
+    int numero_A;
+    int numero_B;
+    int numero_C;
+
+    printf("Digite A: ");
+    scanf("%d", &numero_A);
+    
+    printf("Digite numero B: ");
+    scanf("%d", &numero_B);
+    
+    printf("Digite numero C: ");
+    scanf("%d", &numero_C);
+
+
+ delta (numero_A,numero_B,numero_C);
+
+    return 0;
+}
