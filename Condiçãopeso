@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+float imc(float peso, float altura) {
+    float resultado;
+    resultado = peso / (altura * altura);
+
+    printf("IMC: %.2f\n", resultado);
+
+    return resultado;
+}
+
+const char* condicao(float resultado) {
+    static char texto[240];
+
+    if (resultado < 17)
+        strcpy(texto, "Muito abaixo do peso ideal");
+    else if (resultado >= 17 && resultado < 18.5)
+        strcpy(texto, "Abaixo do peso");
+    else if (resultado >= 18.5 && resultado < 25)
+        strcpy(texto, "Peso Normal");
+    else if (resultado >= 25 && resultado < 30)
+        strcpy(texto, "Acima do peso");
+    else if (resultado >= 30 && resultado < 35)
+        strcpy(texto, "Obesidade grau 1");
+    else if (resultado >= 35 && resultado < 40)
+        strcpy(texto, "Obesidade grau 2");
+    else
+        strcpy(texto, "Obesidade grau 3 (mórbida)");
+
+    return texto;
+}
+
+int main() {
+    float peso;
+    float altura;
+    float resultado;
+
+    printf("Digite seu peso: ");
+    scanf("%f", &peso);
+    printf("Digite sua altura: ");
+    scanf("%f", &altura);
+
+    resultado = imc(peso, altura);
+    const char* condicao_texto = condicao(resultado);
+
+    printf("Condição: %s\n", condicao_texto);
+
+    return 0;
+}
